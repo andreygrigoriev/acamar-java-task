@@ -17,6 +17,15 @@ public class Task1 {
      * @return - the length of the last word in the string.
      */
     public int lengthOfLastWord(String str) {
-        return 0;
+        int idx = str.length() - 1;
+        int len = 0;
+        while (str.charAt(idx) == ' ') {
+            idx--;
+        }
+        while (idx >= 0 && str.charAt(idx) != ' ') {
+            len++;
+            idx--;
+        }
+        return len;
     }
 }
